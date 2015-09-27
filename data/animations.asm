@@ -1050,6 +1050,7 @@ PsywaveAnim: ; 7a674 (1e:6674)
 
 SplashAnim: ; 7a67a (1e:667a)
 	db SE_BOUNCE_UP_AND_DOWN, $95
+	db $46,$1B,$28
 	db $FF
 
 AcidArmorAnim: ; 7a67d (1e:667d)

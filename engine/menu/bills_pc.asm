@@ -88,7 +88,7 @@ DisplayPCMainMenu:: ; 213c8 (8:53c8)
 SomeonesPCText:   db "SOMEONE's PC@"
 BillsPCText:      db "BILL's PC@"
 PlayersPCText:    db "'s PC@"
-OaksPCText:       db "PROF.OAK's PC@"
+OaksPCText:       db "GIO's PC@"
 PKMNLeaguePCText: db $4a, "LEAGUE@"
 LogOffPCText:     db "LOG OFF@"
 

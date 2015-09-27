@@ -1,6 +1,6 @@
 _OaksLabGaryText1:: ; 94d5b (25:4d5b)
 	text $53,": Yo"
-	line $52,"! Gramps"
+	line $52,"! GIO."
 	cont "isn't around!"
 
 IF DEF(_YELLOW)
@@ -51,32 +51,35 @@ ENDC
 
 IF DEF(_YELLOW)
 _OaksLabPikachuText::
-	text "OAK: Go ahead,"
-	line "it's yours!"
+	text "GIO: Go ahead,"
+	line "keep it!"
 	done
 ENDC
 
 _OaksLabCharmanderText:: ; 94e06 (25:4e06)
 	text "So! You want the"
-	line "fire #MON,"
-	cont "CHARMANDER?"
+	line "water #MON,"
+	cont "MAGIKARP?"
 	done
 
 _OaksLabSquirtleText:: ; 94e2f (25:4e2f)
 	text "So! You want the"
-	line "water #MON,"
-	cont "SQUIRTLE?"
+	line "ghost #MON,"
+	cont "GHASTLY?"
 	done
 
 _OaksLabBulbasaurText:: ; 94e57 (25:4e57)
 	text "So! You want the"
-	line "plant #MON,"
-	cont "BULBASAUR?"
+	line "psychic #MON,"
+	cont "ABRA?"
 	done
 
 _OaksLabMonEnergeticText:: ; 94e80 (25:4e80)
 	text "This #MON is"
 	line "really energetic!"
+	cont "It was stolen and"
+	cont "maintained top"
+	cont "class."
 	prompt
 
 _OaksLabReceivedMonText:: ; 94ea0 (25:4ea0)
@@ -86,21 +89,26 @@ _OaksLabReceivedMonText:: ; 94ea0 (25:4ea0)
 	text "!@@"
 
 _OaksLabLastMonText:: ; 94eb6 (25:4eb6)
-	text "That's PROF.OAK's"
+	text "That's GIO's"
 	line "last #MON!"
 	done
 
 _OaksLabText_1d2f0:: ; 94ed2 (25:4ed2)
-	text "OAK: Now, ", $52, ","
+	text "GIO: Now, ", $52, ","
 	line "which #MON do"
 	cont "you want?"
+	cont "Hurry up boy"
+	cont "times a"
+	cont "ticking..."
 	done
 
 _OaksLabText_1d2f5:: ; 94ef8 (25:4ef8)
-	text "OAK: If a wild"
+	text "GIO: If a wild"
 	line "#MON appears,"
 	cont "your #MON can"
 	cont "fight against it!"
+	cont "Assuming you win"
+	cont "of course."
 
 IF DEF(_YELLOW)
 	para "Afterward, go on"
@@ -110,12 +118,12 @@ ENDC
 
 _OaksLabText_1d2fa:: ; 94f36 (25:4f36)
 IF DEF(_YELLOW)
-	text "OAK: You should"
+	text "GIO: You should"
 	line "talk to it and"
 	cont "see how it feels."
 	done
 ELSE
-	text "OAK: ", $52, ","
+	text "GIO: ", $52, ","
 	line "raise your young"
 	cont "#MON by making"
 	cont "it fight!"
@@ -123,7 +131,7 @@ ELSE
 ENDC
 
 _OaksLabDeliverParcelText1:: ; 94f69 (25:4f69)
-	text "OAK: Oh, ", $52, "!"
+	text "GIO: Oh, ", $52, "!"
 
 	para "How is my old"
 	line "#MON?"
@@ -134,9 +142,12 @@ _OaksLabDeliverParcelText1:: ; 94f69 (25:4f69)
 	para "You must be"
 	line "talented as a"
 	cont "#MON trainer!"
+	cont "Just like me"
 
 	para "What? You have"
 	line "something for me?"
+	cont "Normally I do the"
+	cont "taking..."
 
 	para $52, " delivered"
 	line "OAK's PARCEL.@@"
@@ -145,7 +156,8 @@ _OaksLabDeliverParcelText2:: ; 9500f (25:500f)
 	db $0
 	para "Ah! This is the"
 	line "custom # BALL"
-	cont "I ordered!"
+	cont "I had stolen"
+	cont "for me!"
 IF DEF(_YELLOW)
 	cont "Thanks, ",$52,"!"
 
@@ -154,6 +166,10 @@ IF DEF(_YELLOW)
 	cont "something for me."
 ELSE
 	cont "Thank you!"
+	cont "And by the"
+	cont "way I already"
+	cont "gave you one"
+	cont "earlier"
 ENDC
 	done
 
@@ -164,7 +180,7 @@ _OaksLabAroundWorldText:: ; 95045 (25:5045)
 	done
 
 _OaksLabGivePokeballsText1:: ; 9506d (25:506d)
-	text "OAK: You can't get"
+	text "GIO: You can't get"
 	line "detailed data on"
 	cont "#MON by just"
 	cont "seeing them."
@@ -182,6 +198,8 @@ _OaksLabGivePokeballsText2:: ; 950f2 (25:50f2)
 	para "When a wild"
 	line "#MON appears,"
 	cont "it's fair game."
+	cont "At least for"
+	cont "rule-players."
 
 IF DEF(_YELLOW)
 	para "Just like I showed"
@@ -201,16 +219,19 @@ ENDC
 	done
 
 _OaksLabPleaseVisitText:: ; 9519e (25:519e)
-	text "OAK: Come see me"
+	text "GIO: Come see me"
 	line "sometimes."
 
 	para "I want to know how"
 	line "your #DEX is"
 	cont "coming along."
+	cont "and dont forget"
+	cont "to join Team"
+	cont "Rocket!"
 	done
 
 _OaksLabText_1d31d:: ; 951e9 (25:51e9)
-	text "OAK: Good to see "
+	text "GIO: Good to see "
 	line "you! How is your "
 	cont "#DEX coming? "
 	cont "Here, let me take"
@@ -228,24 +249,24 @@ _OaksLabText8:: ; 95268 (25:5268)
 	done
 
 _OaksLabText_1d340:: ; 9526b (25:526b)
-	text "PROF.OAK is the"
+	text "GIO. is the"
 	line "authority on"
-	cont "#MON!"
+	cont "#MON! theft"
 
 	para "Many #MON"
-	line "trainers hold him"
+	line "thieves hold him"
 	cont "in high regard!"
 	done
 
 _OaksLabRivalWaitingText:: ; 952bb (25:52bb)
-	text $53, ": Gramps!"
+	text $53, ": GIO!"
 	line "I'm fed up with"
 	cont "waiting!"
 	done
 
 _OaksLabChooseMonText:: ; 952df (25:52df)
 IF DEF(_YELLOW)
-	text "OAK: Hmm? ",$53,"?"
+	text "GIO: Hmm? ",$53,"?"
 	line "Why are you here"
 	cont "already?"
 
@@ -267,7 +288,7 @@ IF DEF(_YELLOW)
 	line "Go on, take it!"
 	done
 ELSE
-	text "OAK: ", $53, "?"
+	text "GIO: ", $53, "?"
 	line "Let me think..."
 
 	para "Oh, that's right,"
@@ -285,8 +306,8 @@ ELSE
 	line "the # BALLs."
 
 	para "When I was young,"
-	line "I was a serious"
-	cont "#MON trainer!"
+	line "I was a newbie"
+	cont "#MON thief!"
 
 	para "In my old age, I"
 	line "have only 3 left,"
@@ -297,18 +318,19 @@ ENDC
 
 _OaksLabRivalInterjectionText:: ; 953dc (25:53dc)
 	text $53, ": Hey!"
-	line "Gramps! What"
+	line "GIO! What"
 	cont "about me?"
+	cont "This isnt fair!"
 	done
 
 _OaksLabBePatientText:: ; 953fc (25:53fc)
 IF DEF(_YELLOW)
-	text "OAK: Be patient,"
+	text "GIO: Be patient,"
 	line $53,", I'll give"
 	cont "you one later."
 	done
 ELSE
-	text "OAK: Be patient!"
+	text "GIO: Be patient!"
 	line $53, ", you can"
 	cont "have one too!"
 	done
@@ -326,17 +348,17 @@ _OaksLabRivalTakesText2::
 	line "the #MON!@@"
 
 _OaksLabRivalTakesText3::
-	text "OAK: ",$53,"! What"
+	text "GIO: ",$53,"! What"
 	line "are you doing?"
 	prompt
 
 _OaksLabRivalTakesText4::
-	text $53,": Gramps, I"
+	text $53,": GIO., I"
 	line "want this one!"
 	prompt
 
 _OaksLabRivalTakesText5::
-	text "OAK: But, I... Oh,"
+	text "GIO: But, I... Oh,"
 	line "all right then."
 	cont "That #MON is"
 	cont "yours."
@@ -350,7 +372,7 @@ _OaksLabRivalTakesText5::
 	done
 
 _OaksLabOakGivesText::
-	text "OAK: ",$52,", this"
+	text "GIO: ",$52,", this"
 	line "is the #MON I"
 	cont "caught earlier."
 
@@ -368,7 +390,7 @@ _OaksLabReceivedText::
 ENDC
 
 _OaksLabLeavingText:: ; 95427 (25:5427)
-	text "OAK: Hey! Don't go"
+	text "GIO: Hey! Don't go"
 	line "away yet!"
 	done
 
@@ -411,17 +433,17 @@ _OaksLabRivalToughenUpText:: ; 95502 (25:5502)
 	cont "#MON fight to"
 	cont "toughen it up!"
 
-	para $52, "! Gramps!"
-	line "Smell you later!"
+	para $52, "! GIO!"
+	line "Smell ya later!"
 	done
 
 IF DEF(_YELLOW)
 _OaksLabPikachuDislikesPokeballsText1::
-	text "OAK: What?"
+	text "GIO: What?"
 	done
 
 _OaksLabPikachuDislikesPokeballsText2::
-	text "OAK: Would you"
+	text "GIO: Would you"
 	line "look at that!"
 
 	para "It's odd, but it"
@@ -442,12 +464,12 @@ _OaksLabPikachuDislikesPokeballsText2::
 ENDC
 
 _OaksLabText21:: ; 95551 (25:5551)
-	text $53, ": Gramps!"
+	text $53, ": GIO!"
 	done
 
 _OaksLabText22:: ; 9555d (25:555d)
 IF DEF(_YELLOW)
-	text $53,": Gramps,"
+	text $53,": GIO,"
 	line "my #MON has"
 	cont "grown stronger!"
 	cont "Check it out!"
@@ -460,7 +482,7 @@ ENDC
 
 _OaksLabText23:: ; 9557b (25:557b)
 IF DEF(_YELLOW)
-	text "OAK: Ah, ",$53,","
+	text "GIO: Ah, ",$53,","
 	line "good timing!"
 
 	para "I needed to ask"
@@ -468,7 +490,7 @@ IF DEF(_YELLOW)
 	cont "something for me."
 	done
 ELSE
-	text "OAK: Oh right! I"
+	text "GIO: Oh right! I"
 	line "have a request"
 	cont "of you two."
 	done
@@ -489,16 +511,16 @@ _OaksLabText24:: ; 955a8 (25:55a8)
 	done
 
 _OaksLabText25:: ; 9562a (25:562a)
-	text "OAK: ", $52, " and"
+	text "GIO: ", $52, " and"
 	line $53, "! Take"
 	cont "these with you!"
 
 	para $52, " got"
-	line "#DEX from OAK!@@"
+	line "#DEX from GIO!@@"
 
 _OaksLabText26:: ; 95664 (25:5664)
 	text "To make a complete"
-	line "guide on all the"
+	line "theft on all the"
 	cont "#MON in the"
 	cont "world..."
 
@@ -510,6 +532,8 @@ _OaksLabText26:: ; 95664 (25:5664)
 	para "So, I want you two"
 	line "to fulfill my"
 	cont "dream for me!"
+	cont "and of course"
+	cont "join Team Rocket."
 
 	para "Get moving, you"
 	line "two!"
@@ -521,7 +545,7 @@ _OaksLabText26:: ; 95664 (25:5664)
 
 _OaksLabText27:: ; 95741 (25:5741)
 	text $53, ": Alright"
-	line "Gramps! Leave it"
+	line "GIO! Leave it"
 	cont "all to me!"
 
 	para $52, ", I hate to"
@@ -539,7 +563,7 @@ _OaksLabText27:: ; 95741 (25:5741)
 
 _OaksLabText_1d405:: ; 957eb (25:57eb)
 	text "I study #MON as"
-	line "PROF.OAK's AIDE."
+	line "GIO AIDE."
 	done
 
 _OaksLabText_441cc:: ; 9580c (25:580c)
@@ -553,7 +577,7 @@ _OaksLabText_441cc:: ; 9580c (25:580c)
 	TX_NUM hDexRatingNumMonsOwned, 1, 3
 	text " #MON owned"
 
-	para "PROF.OAK's"
+	para "GIO's"
 	line "Rating:"
 	prompt
 
@@ -568,7 +592,8 @@ _OaksLabText_44206:: ; 95893 (25:5893)
 	text "You're on the"
 	line "right track! "
 	cont "Get a FLASH HM"
-	cont "from my AIDE!"
+	cont "from my"
+	cont "Subordinate!"
 	done
 
 _OaksLabText_4420b:: ; 958cc (25:58cc)
@@ -582,12 +607,14 @@ _OaksLabText_44210:: ; 95903 (25:5903)
 	text "Good, you're"
 	line "trying hard!"
 	cont "Get an ITEMFINDER"
-	cont "from my AIDE!"
+	cont "from my"
+	cont "Subordinate!"
 	done
 
 _OaksLabText_44215:: ; 9593d (25:593d)
 	text "Looking good!"
-	line "Go find my AIDE"
+	line "Go find my"
+	cont "Subordinate"
 	cont "when you get 50!"
 	done
 
@@ -596,7 +623,7 @@ _OaksLabText_4421a:: ; 9596d (25:596d)
 	line "least 50 species!"
 	cont "Be sure to get"
 	cont "EXP.ALL from my"
-	cont "AIDE!"
+	cont "Subordinate!"
 	done
 
 _OaksLabText_4421f:: ; 959b8 (25:59b8)
@@ -668,4 +695,3 @@ ELSE
 ENDC
 	cont "Congratulations!"
 	done
-

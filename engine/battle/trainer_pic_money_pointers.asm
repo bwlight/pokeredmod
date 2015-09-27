@@ -101,7 +101,7 @@ TrainerPicAndMoneyPointers: ; 39914 (e:5914)
 	money 9900
 
 	dw BrockPic
-	money 9900
+	money 10000
 
 	dw MistyPic
 	money 9900

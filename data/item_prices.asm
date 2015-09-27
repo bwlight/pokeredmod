@@ -3,8 +3,8 @@ ItemPrices: ; 4608 (1:4608)
 	money 1200  ; ULTRA_BALL
 	money 600   ; GREAT_BALL
 	money 200   ; POKE_BALL
-	money 0     ; TOWN_MAP
-	money 0     ; BICYCLE
+	money 50    ; TOWN_MAP
+	money 10000 ; BICYCLE
 	money 0     ; SURFBOARD
 	money 1000  ; SAFARI_BALL
 	money 0     ; POKEDEX
@@ -62,7 +62,7 @@ ItemPrices: ; 4608 (1:4608)
 	money 300   ; SODA_POP
 	money 350   ; LEMONADE
 	money 0     ; S_S__TICKET
-	money 0     ; GOLD_TEETH
+	money 250     ; GOLD_TEETH
 	money 500   ; X_ATTACK
 	money 550   ; X_DEFEND
 	money 350   ; X_SPEED

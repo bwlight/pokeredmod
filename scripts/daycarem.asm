@@ -35,8 +35,8 @@ DayCareMText1: ; 56254 (15:6254)
 	pop af
 	ld hl, DayCareAllRightThenText
 	jp c, .done
-	callab KnowsHMMove
-	ld hl, DayCareCantAcceptMonWithHMText
+	;callab KnowsHMMove
+	;ld hl, DayCareCantAcceptMonWithHMText
 	jp c, .done
 	xor a
 	ld [wPartyAndBillsPCSavedMenuItem], a
@@ -109,7 +109,8 @@ DayCareMText1: ; 56254 (15:6254)
 	ld [de], a
 	inc de
 	ld [de], a
-	ld hl, wDayCarePerLevelCost
+	;ld hl, wDayCarePerLevelCost
+	ld hl, 2 ; The normal price is 4 ($0100), reduce to 2 ($0010)
 	ld a, $1
 	ld [hli], a
 	ld [hl], $0

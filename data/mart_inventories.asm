@@ -4,12 +4,36 @@
 
 ; Viridian
 ViridianMartText6:: ; 2442 (0:2442)
-	db $FE,4,POKE_BALL,ANTIDOTE,PARLYZ_HEAL,BURN_HEAL,$FF
+	db $FE
+	db 9
+	db TOWN_MAP
+	db POKE_BALL
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db BURN_HEAL
+	db BICYCLE
+	db RARE_CANDY
+	db NUGGET
+	db GOLD_TEETH
+	db $FF
 
 ; Pewter
 PewterMartText1:: ; 2449 (0:2449)
-	db $FE,7,POKE_BALL,POTION,ESCAPE_ROPE,ANTIDOTE,BURN_HEAL,AWAKENING
-	db PARLYZ_HEAL,$FF
+    db $FE
+	db 12
+	db TOWN_MAP
+	db POKE_BALL
+	db POTION
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db BURN_HEAL
+	db ESCAPE_ROPE
+	db AWAKENING
+	db BICYCLE
+	db RARE_CANDY
+	db NUGGET
+	db GOLD_TEETH
+	db $FF
 
 ; Cerulean
 CeruleanMartText1:: ; 2453 (0:2453)

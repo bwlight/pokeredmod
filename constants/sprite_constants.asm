@@ -16,8 +16,8 @@ const_value = 0
 const_value = 1
 
 	const SPRITE_RED                       ; $01
-	const SPRITE_BLUE                      ; $02
-	const SPRITE_OAK                       ; $03
+	const SPRITE_BLUE                      ; $02 ; Originally SPRITE_BLUE
+	const SPRITE_OAK                       ; $03 ; Originally SPRITE_OAK
 	const SPRITE_BUG_CATCHER               ; $04
 	const SPRITE_SLOWBRO                   ; $05
 	const SPRITE_LASS                      ; $06
@@ -37,13 +37,13 @@ const_value = 1
 	const SPRITE_COOK                      ; $14
 	const SPRITE_BIKE_SHOP_GUY             ; $15
 	const SPRITE_MR_FUJI                   ; $16
-	const SPRITE_GIOVANNI                  ; $17
+	const SPRITE_GIOVANNI                  ; $17 ; Originally SPRITE_GIOVANNI
 	const SPRITE_ROCKET                    ; $18
 	const SPRITE_MEDIUM                    ; $19
 	const SPRITE_WAITER                    ; $1a
 	const SPRITE_ERIKA                     ; $1b
 	const SPRITE_MOM_GEISHA                ; $1c
-	const SPRITE_BRUNETTE_GIRL             ; $1d
+	const SPRITE_BRUNETTE_GIRL             ; $1d ; Originally SPRITE_BRUNETTE_GIRL
 	const SPRITE_LANCE                     ; $1e
 	const SPRITE_OAK_SCIENTIST_AIDE        ; $1f
 	const SPRITE_OAK_AIDE                  ; $20

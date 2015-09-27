@@ -1,0 +1,143 @@
+Section A
+---------------
+Aerodactyl
+Abra
+Cubone
+Ditto
+Charmander
+
+Section B
+---------------
+Chansey
+Bellsprout
+Ekans
+Growlithe
+Magnemite
+
+Section C
+---------------
+Electrabuzz
+Exeggcute
+Doduo
+NidoranM
+Drowzee
+
+Section D
+---------------
+Farfetchd
+NidoranF
+Caterpie
+Koffing
+Mankey
+
+Section E
+---------------
+Hitmochan
+Bulbasaur
+Clefairy
+Diglett
+Grimer
+
+Section F
+---------------
+Hitmonlee
+Evee
+Geodude
+Gastly
+Machop
+
+Section G
+----------------
+Jynx
+Meowth
+Oddish
+Omanyte
+Paris
+
+Section H
+----------------
+Kangaskhan
+Pidgey
+Pikachu
+Ponyta
+
+Section I
+----------------
+Lickitung
+Rattata
+Rhyhorn
+Sandshrew
+
+
+Section J
+----------------
+Magmar
+Slowpoke
+Spearow
+Squirtle
+
+
+Section K
+----------------
+MrMime
+Voltorb
+Vulpix
+Weedle
+
+
+Section L
+----------------
+Onyx
+Zubat
+Venonat
+Shellder
+Porygon
+
+
+Jiglypuff
+Kabuto
+				14
+
+Water
+============
+Dratini
+Goldeen
+Horsea
+Krabby
+Magikarp			22
+Poliwag
+Seel
+Staryu
+Tentacool
+Lapras
+
+
+Only Evolution
+==============
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pinsir
+Psyduck
+Scyther			70
+Snorlax
+Tangela
+Tauros			73
+
+Legendary
+==============
+Articuno
+Moltress
+Zapdos
+Mew
+Mewtwo			78

@@ -32,49 +32,118 @@ SetDefaultNames: ; 60ca (1:60ca)
 	jp CopyData
 
 OakSpeech: ; 6115 (1:6115)
+
 	ld a,$FF
 	call PlaySound ; stop music
-	ld a, BANK(Music_Routes2)
+
+	; Load up TeamRocket Music
+	ld a, BANK(Music_Dungeon1)
 	ld c,a
-	ld a, MUSIC_ROUTES2
+	ld a, MUSIC_DUNGEON1
 	call PlayMusic
+
+	; Pre-requisites
 	call ClearScreen
 	call LoadTextBoxTilePatterns
 	call SetDefaultNames
+
+	; Some pre-setup
 	predef InitPlayerData2
+
+	; Give 5 Potions
 	ld hl,wNumBoxItems
 	ld a,POTION
 	ld [wcf91],a
+	ld a,5
+	ld [wItemQuantity],a
+	call AddItemToInventory
+
+	; Give 1 Rare Candy
+	ld hl,wNumBoxItems
+	ld a,RARE_CANDY
+	ld [wcf91],a
 	ld a,1
 	ld [wItemQuantity],a
-	call AddItemToInventory  ; give one potion
+	call AddItemToInventory
+
+	; Give 5 Pokeballs
+	ld hl,wNumBoxItems
+	ld a,POKE_BALL
+	ld [wcf91],a
+	ld a,5
+	ld [wItemQuantity],a
+	call AddItemToInventory
+
+	; Give 1 Master Ball
+	ld hl,wNumBoxItems
+	ld a,MASTER_BALL
+	ld [wcf91],a
+	ld a,1
+	ld [wItemQuantity],a
+	call AddItemToInventory
+
+	; Load in default map
 	ld a,[wDefaultMap]
 	ld [wDestinationMap],a
 	call SpecialWarpIn
+
 	xor a
 	ld [hTilesetType],a
 	ld a,[wd732]
 	bit 1,a ; possibly a debug mode bit
 	jp nz,.skipChoosingNames
-	ld de,ProfOakPic
+
+	; Prepare to show Giovanni
+	ld de, ProfOakPic
 	lb bc, Bank(ProfOakPic), $00
 	call IntroDisplayPicCenteredOrUpperRight
 	call FadeInIntroPic
-	ld hl,OakSpeechText1
+
+	; Giovanni chatter
+	ld hl,OakSpeechText1a
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
-	ld a,NIDORINO
+
+	; Show Oak Tied Up
+	ld de,ProfOakTiedUpPic
+	lb bc, Bank(ProfOakTiedUpPic), $00
+	call IntroDisplayPicCenteredOrUpperRight
+	call FadeInIntroPic
+
+	ld hl,OakSpeechText1b
+	call PrintText
+	call GBFadeOutToWhite
+	call ClearScreen
+
+	; Prepare to show Giovanni
+	ld de, ProfOakPic
+	lb bc, Bank(ProfOakPic), $00
+	call IntroDisplayPicCenteredOrUpperRight
+	call FadeInIntroPic
+
+	; Giovanni chatter
+	ld hl,OakSpeechText1c
+	call PrintText
+	call GBFadeOutToWhite
+	call ClearScreen
+
+	; Show Mewtwo
+	ld a,RHYDON
 	ld [wd0b5],a
 	ld [wcf91],a
 	call GetMonHeader
 	coord hl, 6, 4
 	call LoadFlippedFrontSpriteByMonIndex
 	call MovePicLeft
+
+	; More chatter
 	ld hl,OakSpeechText2
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
+
+	; Show you and pick your name
 	ld de,RedPicFront
 	lb bc, Bank(RedPicFront), $00
 	call IntroDisplayPicCenteredOrUpperRight
@@ -84,6 +153,8 @@ OakSpeech: ; 6115 (1:6115)
 	call ChoosePlayerName
 	call GBFadeOutToWhite
 	call ClearScreen
+
+	; Show rival and pick his name
 	ld de,Rival1Pic
 	lb bc, Bank(Rival1Pic), $00
 	call IntroDisplayPicCenteredOrUpperRight
@@ -94,6 +165,8 @@ OakSpeech: ; 6115 (1:6115)
 .skipChoosingNames
 	call GBFadeOutToWhite
 	call ClearScreen
+
+	; Re-show you and more chatter
 	ld de,RedPicFront
 	lb bc, Bank(RedPicFront), $00
 	call IntroDisplayPicCenteredOrUpperRight
@@ -103,6 +176,7 @@ OakSpeech: ; 6115 (1:6115)
 	jr nz,.next
 	ld hl,OakSpeechText3
 	call PrintText
+
 .next
 	ld a,[H_LOADEDROMBANK]
 	push af
@@ -152,8 +226,14 @@ OakSpeech: ; 6115 (1:6115)
 	call DelayFrames
 	call GBFadeOutToWhite
 	jp ClearScreen
-OakSpeechText1: ; 6253 (1:6253)
-	TX_FAR _OakSpeechText1
+OakSpeechText1a: ; 6253 (1:6253)
+	TX_FAR _OakSpeechText1a
+	db "@"
+OakSpeechText1b: ; 6253 (1:6253)
+	TX_FAR _OakSpeechText1b
+	db "@"
+OakSpeechText1c: ; 6253 (1:6253)
+	TX_FAR _OakSpeechText1c
 	db "@"
 OakSpeechText2: ; 6258 (1:6258)
 	TX_FAR _OakSpeechText2A

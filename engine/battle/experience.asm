@@ -1,7 +1,7 @@
 GainExperience: ; 5524f (15:524f)
 	ld a, [wLinkState]
-	cp LINK_STATE_BATTLING
-	ret z ; return if link battle
+	;cp LINK_STATE_BATTLING
+	;ret z ; return if link battle
 	call DivideExpDataByNumMonsGainingExp
 	ld hl, wPartyMon1
 	xor a
@@ -288,7 +288,15 @@ GainExperience: ; 5524f (15:524f)
 	xor a
 	ld [hl], a
 	pop bc
+
+	ld a, [wLinkState]
+    cp LINK_STATE_BATTLING
+	call z, DoAutoSave ; Auto save if in link battle
 	predef_jump FlagActionPredef ; set the fought current enemy flag for the mon that is currently out
+
+DoAutoSave:
+    predef SaveSAVtoSRAM2
+    ret
 
 ; divide enemy base stats, catch rate, and base exp by the number of mons gaining exp
 DivideExpDataByNumMonsGainingExp: ; 5546c (15:546c)

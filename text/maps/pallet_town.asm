@@ -1,9 +1,9 @@
 _OakAppearsText::
-	text "OAK: Hey! Wait!"
+	text "GIO: Hey! Wait!"
 	line "Don't go out!@@"
 
 _OakWalksUpText::
-	text "OAK: It's unsafe!"
+	text "GIO: It's unsafe!"
 	line "Wild #MON live"
 	cont "in tall grass!"
 
@@ -36,8 +36,9 @@ _PalletTownText3::
 	done
 
 _PalletTownText4::
-	text "OAK #MON"
-	line "RESEARCH LAB"
+	text "GIOVANNI"
+	line "#MON"
+	cont "RESEARCH LAB"
 	done
 
 _PalletTownText5::

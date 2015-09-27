@@ -650,8 +650,8 @@ ItemUseBicycle: ; d977 (3:5977)
 	ld hl,GotOffBicycleText
 	jr .printText
 .tryToGetOnBike
-	call IsBikeRidingAllowed
-	jp nc,NoCyclingAllowedHere
+	;call IsBikeRidingAllowed
+	;jp nc,NoCyclingAllowedHere
 	call ItemUseReloadOverworldData
 	xor a ; no keys pressed
 	ld [hJoyHeld],a ; current joypad state
@@ -2289,7 +2289,8 @@ ItemUseTMHM: ; e479 (3:6479)
 	ld a,[wcf91]
 	call IsItemHM
 	ret c
-	jp RemoveUsedItem
+	jp RemoveUsedItem ; Allow, may be too much to keep TMs forever
+	;ret
 
 BootedUpTMText: ; e54f (3:654f)
 	TX_FAR _BootedUpTMText
@@ -2343,7 +2344,8 @@ ThrowBallAtTrainerMon: ; e58b (3:658b)
 	call PrintText
 	ld hl,ThrowBallAtTrainerMonText2
 	call PrintText
-	jr RemoveUsedItem
+	;jr RemoveUsedItem
+	ret
 
 NoCyclingAllowedHere: ; e5ac (3:65ac)
 	ld hl,NoCyclingAllowedHereText

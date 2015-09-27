@@ -14,10 +14,10 @@ dw AbraPicFront
 dw AbraPicBack
 ; attacks known at lvl 0
 db TELEPORT
+db CONFUSION
 db 0
 db 0
-db 0
-db 3 ; growth rate
+db 5 ; growth rate
 ; learnset
 	tmlearn 1,5,6,8
 	tmlearn 9,10

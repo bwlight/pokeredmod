@@ -633,7 +633,7 @@ TextCommandSounds:: ; 1c64 (0:1c64)
 	db $10,SFX_GET_ITEM_2
 	db $11,SFX_GET_KEY_ITEM
 	db $13,SFX_DEX_PAGE_ADDED
-	db $14,NIDORINA ; used in OakSpeech
+	db $14,RHYDON ; used in OakSpeech
 	db $15,PIDGEOT  ; used in SaffronCityText12
 	db $16,DEWGONG  ; unused?
 

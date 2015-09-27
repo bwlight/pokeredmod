@@ -10,6 +10,7 @@ PICS_2 EQU $A
 PICS_3 EQU $B
 PICS_4 EQU $C
 PICS_5 EQU $D
+PICS_6 EQU $2D
 
 
 INCLUDE "home.asm"
@@ -47,7 +48,7 @@ ResetStatusAndHalveMoneyOnBlackout::
 	xor a
 	ld [hDivideBCDDivisor], a
 	ld [hDivideBCDDivisor + 1], a
-	ld a, 2
+	ld a, 1 ; Dont really lose any money
 	ld [hDivideBCDDivisor + 2], a
 	predef DivideBCDPredef3
 	ld a, [hDivideBCDQuotient]
@@ -2714,7 +2715,7 @@ IncrementDayCareMonExp: ; c8de (3:48de)
 	ld a, [wDayCareInUse]
 	and a
 	ret z
-	ld hl, wDayCareMonExp + 2
+	ld hl, wDayCareMonExp + 6 ; Originally 2
 	inc [hl]
 	ret nz
 	dec hl
@@ -4820,8 +4821,8 @@ SECTION "NPC Sprites 2", ROMX, BANK[NPC_SPRITES_2]
 
 RedCyclingSprite:     INCBIN "gfx/sprites/cycling.2bpp"
 RedSprite:            INCBIN "gfx/sprites/red.2bpp"
-BlueSprite:           INCBIN "gfx/sprites/blue.2bpp"
-OakSprite:            INCBIN "gfx/sprites/oak.2bpp"
+BlueSprite:           INCBIN "gfx/sprites/brunette_girl.2bpp" ; Originally blue
+OakSprite:            INCBIN "gfx/sprites/giovanni.2bpp" ; Originally oak
 BugCatcherSprite:     INCBIN "gfx/sprites/bug_catcher.2bpp"
 SlowbroSprite:        INCBIN "gfx/sprites/slowbro.2bpp"
 LassSprite:           INCBIN "gfx/sprites/lass.2bpp"
@@ -4841,13 +4842,13 @@ SailorSprite:         INCBIN "gfx/sprites/sailor.2bpp"
 CookSprite:           INCBIN "gfx/sprites/cook.2bpp"
 BikeShopGuySprite:    INCBIN "gfx/sprites/bike_shop_guy.2bpp"
 MrFujiSprite:         INCBIN "gfx/sprites/mr_fuji.2bpp"
-GiovanniSprite:       INCBIN "gfx/sprites/giovanni.2bpp"
+GiovanniSprite:       INCBIN "gfx/sprites/oak.2bpp" ; Originally giovanni
 RocketSprite:         INCBIN "gfx/sprites/rocket.2bpp"
 MediumSprite:         INCBIN "gfx/sprites/medium.2bpp"
 WaiterSprite:         INCBIN "gfx/sprites/waiter.2bpp"
 ErikaSprite:          INCBIN "gfx/sprites/erika.2bpp"
 MomGeishaSprite:      INCBIN "gfx/sprites/mom_geisha.2bpp"
-BrunetteGirlSprite:   INCBIN "gfx/sprites/brunette_girl.2bpp"
+BrunetteGirlSprite:   INCBIN "gfx/sprites/blue.2bpp" ; Originally brunette_girl
 LanceSprite:          INCBIN "gfx/sprites/lance.2bpp"
 MomSprite:            INCBIN "gfx/sprites/mom.2bpp"
 BaldingGuySprite:     INCBIN "gfx/sprites/balding_guy.2bpp"
@@ -5889,25 +5890,25 @@ JugglerPic::       INCBIN "pic/trainer/juggler.pic"
 TamerPic::         INCBIN "pic/trainer/tamer.pic"
 BirdKeeperPic::    INCBIN "pic/trainer/birdkeeper.pic"
 BlackbeltPic::     INCBIN "pic/trainer/blackbelt.pic"
-Rival1Pic::        INCBIN "pic/trainer/rival1.pic"
-ProfOakPic::       INCBIN "pic/trainer/prof.oak.pic"
+Rival1Pic::        INCBIN "pic/trainer/misty.pic" ; Originally rival1
+ProfOakPic::       INCBIN "pic/trainer/giovanni.pic" ;Originally prof.oak
 ChiefPic::
 ScientistPic::     INCBIN "pic/trainer/scientist.pic"
-GiovanniPic::      INCBIN "pic/trainer/giovanni.pic"
+GiovanniPic::      INCBIN "pic/trainer/prof.oak.pic" ; Originally giovanni
 RocketPic::        INCBIN "pic/trainer/rocket.pic"
 CooltrainerMPic::  INCBIN "pic/trainer/cooltrainerm.pic"
 CooltrainerFPic::  INCBIN "pic/trainer/cooltrainerf.pic"
 BrunoPic::         INCBIN "pic/trainer/bruno.pic"
 BrockPic::         INCBIN "pic/trainer/brock.pic"
-MistyPic::         INCBIN "pic/trainer/misty.pic"
+MistyPic::         INCBIN "pic/trainer/rival2.pic" ; Originally misty
 LtSurgePic::       INCBIN "pic/trainer/lt.surge.pic"
 ErikaPic::         INCBIN "pic/trainer/erika.pic"
 KogaPic::          INCBIN "pic/trainer/koga.pic"
 BlainePic::        INCBIN "pic/trainer/blaine.pic"
 SabrinaPic::       INCBIN "pic/trainer/sabrina.pic"
 GentlemanPic::     INCBIN "pic/trainer/gentleman.pic"
-Rival2Pic::        INCBIN "pic/trainer/rival2.pic"
-Rival3Pic::        INCBIN "pic/trainer/rival3.pic"
+Rival2Pic::        INCBIN "pic/trainer/misty.pic" ; Originally rival2
+Rival3Pic::        INCBIN "pic/trainer/misty.pic" ; Originally rival3
 LoreleiPic::       INCBIN "pic/trainer/lorelei.pic"
 ChannelerPic::     INCBIN "pic/trainer/channeler.pic"
 AgathaPic::        INCBIN "pic/trainer/agatha.pic"
@@ -6714,6 +6715,9 @@ INCLUDE "engine/evolution.asm"
 INCLUDE "engine/overworld/elevator.asm"
 
 INCLUDE "engine/items/tm_prices.asm"
+
+SECTION "Pics 6", ROMX, BANK[PICS_6]
+ProfOakTiedUpPic::    INCBIN "pic/trainer/prof.oak.tied-up.pic"
 
 IF DEF(_OPTION_BEACH_HOUSE)
 SECTION "bank3C",ROMX[$4314],BANK[$3C]

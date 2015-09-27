@@ -23,6 +23,7 @@ PewterCityScript0: ; 19251 (6:5251)
 PewterCityScript_1925e: ; 1925e (6:525e)
 	CheckEvent EVENT_BEAT_BROCK
 	ret nz
+	ret ; Allow bypassing of brock
 	ld hl, CoordsData_19277
 	call ArePlayerCoordsInArray
 	ret nc

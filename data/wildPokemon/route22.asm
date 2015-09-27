@@ -3,14 +3,14 @@ Route22Mons:
 	IF DEF(_RED) || (DEF(_JAPAN) && DEF(_BLUE))
 		db 3,RATTATA
 		db 3,NIDORAN_M
-		db 4,RATTATA
-		db 4,NIDORAN_M
-		db 2,RATTATA
-		db 2,NIDORAN_M
-		db 3,SPEAROW
-		db 5,SPEAROW
-		db 3,NIDORAN_F
-		db 4,NIDORAN_F
+		db 4,BELLSPROUT
+		db 4,CHANSEY
+		db 2,DITTO
+		db 2,DROWZEE
+		db 3,EEVEE
+		db 5,ELECTABUZZ
+		db 3,VOLTORB
+		db 4,EXEGGCUTE
 	ENDC
 	IF DEF(_GREEN) || (!DEF(_JAPAN) && DEF(_BLUE))
 		db 3,RATTATA
@@ -37,4 +37,3 @@ Route22Mons:
 		db 6,SPEAROW
 	ENDC
 	db $00
-

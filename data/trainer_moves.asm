@@ -50,8 +50,8 @@ TeamMoves:
 	db 0
 
 	db BROCK,$1
-	db 2,3,BIND
-	db 2,4,BIDE
+	db 2,3,DIG
+	db 2,4,BODY_SLAM
 	db 0
 
 	db MISTY,$1

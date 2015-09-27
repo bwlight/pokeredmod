@@ -160,7 +160,7 @@ MoveEnd:
 	move SPORE,        SLEEP_EFFECT,                 0, GRASS,    100, 15
 	move FLASH,        ACCURACY_DOWN1_EFFECT,        0, NORMAL,    70, 20
 	move PSYWAVE,      SPECIAL_DAMAGE_EFFECT,        1, PSYCHIC,   80, 15
-	move SPLASH,       SPLASH_EFFECT,                0, NORMAL,   100, 40
+	move SPLASH,       TWO_TO_FIVE_ATTACKS_EFFECT,  35, WATER,    100, 35
 	move ACID_ARMOR,   DEFENSE_UP2_EFFECT,           0, POISON,   100, 40
 	move CRABHAMMER,   NO_ADDITIONAL_EFFECT,        90, WATER,     85, 10
 	move EXPLOSION,    EXPLODE_EFFECT,             170, NORMAL,   100,  5

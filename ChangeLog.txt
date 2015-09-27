@@ -1,0 +1,43 @@
+Changes Made
+================================================
+Giovannie now mainly plays the part as Prof. Oak
+Prof. Oak now mainly plays the part of Giovannie
+Gary now dresses up as Misty
+To prevent confusion, Misty has been replaced with the original Gary
+All Pokemon between pallete town and pewter city now better distributed and accessible throughout the map as wild pokemon
+Throwing a Pokeball at a trainers pokemon doesnt lose the pokeball
+HM's can now be removed just like TMs
+TM's last forever just liek HM's
+Bicycles are no longer restricted anywhere unless specifically enforced
+Daycare now awards more exp and the price has dropped a little
+Daycare no longer rejects HM pokemon
+Brock now uses more powerful moves and has an extra pokemon
+AI opponents who switch pokemon, will be less picky when they switch
+Brock now more agressively switches and heals his pokemon
+You are allowed to move on from pwetwer city without beating or challenging brock
+	However in doing so you'll have to beat him eventually to get to the elite four
+Wild pokemon between pallete town and pewter city have had their levels better distributed and challenging for area
+Oponnets between pallete town and pewter city have had their levels better distributed and challenging for area
+	They also have some new pokemon
+Magikarp's splash now does deal damage and damages similar to Tackle, its pp is also similar to tackle
+Abra now strats off with an extra move, Confusion
+Giovannie taking on Oaks role now talk more like Govanni taking on Oaks role
+Marts between pallete town and pewter city now have expanded items inlcuding items vanilla Pokemon unesasarily held back
+Brock updated with Giovanni mention
+Brock now pays a bit more
+You can now gain expirience, levels up, and evolutions in pokemon link battling
+You can now sell any items without restriction, albeit no money back if no price
+
+Known Issues thus far
+==============================
+Starters needs to be re-done
+Mnay pokemon unfairly uncatachable, particularly original starters
+Pokemon rarity needs to be re-done for wld pokemon
+Wild Pokemon need better planning
+Professor Oak still mentioned in blues house
+	Oak Parcel needs chanign to Gio Parcel
+	Garys sister stll refers to him as grandpa even thoguh him is now Giovanni
+New Evolutions, Pokemon, Types, and other
+New Maps
+More sinister work/for giovanni
+Ashs mom Oak lines

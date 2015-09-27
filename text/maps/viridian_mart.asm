@@ -18,7 +18,7 @@ _ViridianPokeCenterText3:: ; 95be8 (25:5be8)
 
 _ViridianMartText1:: ; 95c36 (25:5c36)
 	text "Okay! Say hi to"
-	line "PROF.OAK for me!"
+	line "GIO for me!"
 	done
 
 _ViridianMartText4:: ; 95c58 (25:5c58)
@@ -27,15 +27,15 @@ _ViridianMartText4:: ; 95c58 (25:5c58)
 	done
 
 ViridianMartParcelQuestText:: ; 95c79 (25:5c79)
-	text "You know PROF."
-	line "OAK, right?"
+	text "You know GIO."
+	line "right?"
 
 	para "His order came in."
 	line "Will you take it"
 	cont "to him?"
 
 	para $52, " got"
-	line "OAK's PARCEL!@@"
+	line "GIO's PARCEL!@@"
 
 _ViridianMartText2:: ; 95cd5 (25:5cd5)
 IF DEF(_YELLOW)

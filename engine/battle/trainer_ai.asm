@@ -309,7 +309,7 @@ TrainerClassMoveChoiceModifications: ; 3989b (e:589b)
 	db 1,3,0  ; COOLTRAINER_M
 	db 1,3,0  ; COOLTRAINER_F
 	db 1,0    ; BRUNO
-	db 1,0    ; BROCK
+	db 1,2,0  ; BROCK
 	db 1,3,0  ; MISTY
 	db 1,3,0  ; LT__SURGE
 	db 1,3,0  ; ERIKA
@@ -451,11 +451,17 @@ CooltrainerFAI: ; 3a601 (e:6601)
 	jp AISwitchIfEnoughMons
 
 BrockAI: ; 3a614 (e:6614)
-; if his active monster has a status condition, use a full heal
-	ld a,[wEnemyMonStatus]
-	and a
-	ret z
-	jp AIUseFullHeal
+
+	; If health below 1/4 do a heal
+	ld a,4
+	call AICheckIfHPBelowFraction
+	jp c,AIUsePotion
+
+	; If health below 1/2 switch if possible
+	ld a,2
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AISwitchIfEnoughMons
 
 MistyAI: ; 3a61c (e:661c)
 	cp $40
@@ -648,7 +654,7 @@ AIPrintItemUseAndUpdateHPBar: ; 3a718 (e:6718)
 	jp DecrementAICount
 
 AISwitchIfEnoughMons: ; 3a72a (e:672a)
-; enemy trainer switches if there are 3 or more unfainted mons in party
+; enemy trainer switches if there are 2 or more unfainted mons in party
 	ld a,[wEnemyPartyCount]
 	ld c,a
 	ld hl,wEnemyMon1HP
@@ -672,7 +678,7 @@ AISwitchIfEnoughMons: ; 3a72a (e:672a)
 	jr nz,.loop
 
 	ld a,d ; how many available monsters are there?
-	cp 2 ; don't bother if only 1 or 2
+	cp 2 ; don't bother if only 2
 	jp nc,SwitchEnemyMon
 	and a
 	ret

@@ -3,32 +3,32 @@ Route2Mons:
 
 	IF DEF(_YELLOW)
 		db 3,RATTATA
-		db 3,PIDGEY
-		db 4,RATTATA
-		db 4,NIDORAN_M
-		db 4,NIDORAN_F
-		db 5,PIDGEY
-		db 6,NIDORAN_M
-		db 6,NIDORAN_F
-		db 7,PIDGEY
+		db 3,FARFETCH_D
+		db 4,SPEAROW
+		db 4,GASTLY
+		db 4,GLOOM
+		db 5,GRIMER
+		db 6,GROWLITHE
+		db 6,HITMONCHAN
+		db 7,HITMONLEE
 		db 7,PIDGEY
 	ELSE
-		db 3,RATTATA
-		db 3,PIDGEY
-		db 4,PIDGEY
-		db 4,RATTATA
-		db 5,PIDGEY
+		db 5,RATTATA
+		db 5,FARFETCH_D
+		db 6,SPEAROW
+		db 6,GASTLY
+		db 7,ODDISH
 		if DEF(_RED)
-			db 3,WEEDLE
+			db 5,GRIMER
 		ENDC
 		if DEF(_BLUE)
-			db 3,CATERPIE
+			db 5,CATERPIE
 		ENDC
-		db 2,RATTATA
-		db 5,RATTATA
+		db 4,GROWLITHE
+		db 7,HITMONCHAN
 		if DEF(_RED)
-			db 4,WEEDLE
-			db 5,WEEDLE
+			db 6,HITMONLEE
+			db 7,PONYTA
 		ENDC
 		if DEF(_BLUE)
 			db 4,CATERPIE
@@ -36,4 +36,3 @@ Route2Mons:
 		ENDC
 	ENDC
 	db $00
-

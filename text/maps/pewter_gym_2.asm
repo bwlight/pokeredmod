@@ -46,13 +46,6 @@ _TM34ExplanationText:: ; 980c0 (26:40c0)
 	cont "can be taught to"
 	cont "#MON!"
 
-	para "A TM is good only"
-	line "once! So when you"
-	cont "use one to teach"
-	cont "a new technique,"
-	cont "pick the #MON"
-	cont "carefully!"
-
 	para "TM34 contains"
 	line "BIDE!"
 
